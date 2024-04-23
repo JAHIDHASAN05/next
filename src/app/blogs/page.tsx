@@ -12,7 +12,20 @@ const BlogsPage =async () => {
 
   return (
     <div>
-     
+      <h1 className="text-4xl text-center my-5 ">
+       All blogs form <span className="text-accent">Blogiz</span>
+      </h1>
+      <p className="text-xl text-center w-2/4 text-gray-400 mx-auto ">
+        <i>
+          Dive into the fascinating world of quantum computing, where unlocking
+          unprecedented computational power.
+        </i>
+      </p>
+      <div className="grid grid-cols-3 gap-10 p-5">
+        {
+            AllBlogs.map((blog:blogs)=> <BlogCard key={blog.id} blog={blog}/>)
+        }
+      </div>
     </div>
   );
 };
